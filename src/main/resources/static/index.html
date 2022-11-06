@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hello WebSocket</title>
+  <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/main.css" rel="stylesheet">
+  <script src="/webjars/jquery/jquery.min.js"></script>
+  <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+  <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+  <script src="/app.js"></script>
+</head>
+<body>
+<noscript><h2 style="color: #ff0000">Seems your browser doesn't support Javascript! Websocket relies on Javascript being
+  enabled. Please enable
+  Javascript and reload this page!</h2></noscript>
+<div id="main-content" class="container">
+
+  <div class="row">
+    <div class="col-md-12">
+      <select id="chooseRoom" onchange="selectedChange()">
+        <option value="none" selected hidden>Select an option</option>
+        <option value="pm1" id="pm1">PM1</option>
+        <option value="pm2" id="pm2">PM2</option>
+        <option value="pm3" id="pm3">PM3</option>
+        <option value="pm4" id="pm4">PM4</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <form class="form-inline">
+      <button id="submit" class="btn btn-default" type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+</body>
+</html>
